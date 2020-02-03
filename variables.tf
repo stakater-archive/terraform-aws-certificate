@@ -4,7 +4,7 @@ variable "platform_domain" {
 }
 
 variable "dns_names" {
-    default = "DOMAIN"
+    default = ["DOMAIN"]
 }
 
 variable "platform_domain_administrator_email" {
