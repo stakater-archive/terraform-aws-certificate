@@ -19,7 +19,7 @@ resource "tls_cert_request" "platform_domain" {
   key_algorithm   = "RSA"
   private_key_pem = "${tls_private_key.platform_domain_csr.private_key_pem}"
 
-  dns_names = ["${var.platform_domain}"]
+  dns_names = "${var.dns_names}"
 
   subject {
     common_name = "*.${var.platform_domain}"
